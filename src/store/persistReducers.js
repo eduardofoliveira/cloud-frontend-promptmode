@@ -6,7 +6,7 @@ export default reducers => {
     {
       key: 'cloud_promptmode',
       storage,
-      whitelist: [''],
+      whitelist: ['auth'],
     },
     reducers
   );
