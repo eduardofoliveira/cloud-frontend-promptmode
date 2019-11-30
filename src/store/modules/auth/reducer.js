@@ -4,6 +4,7 @@ const INITIAL_STATE = {
   token: null,
   signed: false,
   loading: false,
+  user: {},
 };
 
 export default function auth(state = INITIAL_STATE, action) {
@@ -15,6 +16,7 @@ export default function auth(state = INITIAL_STATE, action) {
     case '@auth/SIGN_IN_SUCCESS':
       return produce(state, draft => {
         draft.token = action.payload.token;
+        draft.user = action.payload.user;
         draft.signed = true;
         draft.loading = false;
       });
@@ -26,6 +28,7 @@ export default function auth(state = INITIAL_STATE, action) {
       return produce(state, draft => {
         draft.token = null;
         draft.signed = false;
+        draft.user = {};
       });
     default:
       return state;

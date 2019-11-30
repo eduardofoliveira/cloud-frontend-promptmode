@@ -2,10 +2,10 @@ import React from 'react';
 
 import { Container } from './styles';
 
-export default function Login() {
+export default function Profile() {
   return (
     <Container>
-      <h1>Exibir relatorios</h1>
+      <h1>Profile</h1>
     </Container>
   );
 }
